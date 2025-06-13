@@ -1,4 +1,4 @@
-        * {
+  * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -15,32 +15,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        
-        
-<svg width="0" height="0" style="position:absolute; visibility:hidden;" aria-hidden="true" focusable="false">
-  <defs>
-    <clipPath id="vanCleefClip" clipPathUnits="objectBoundingBox">
-      <path d="
-        M0.5,0 
-        C0.65,0 0.8,0.15 0.8,0.3 
-        C0.8,0.45 0.65,0.6 0.5,0.6 
-        C0.35,0.6 0.2,0.45 0.2,0.3 
-        C0.2,0.15 0.35,0 0.5,0 
-        Z 
-        M0.5,0.6 
-        C0.65,0.6 0.8,0.75 0.8,0.9 
-        C0.8,1.05 0.65,1.2 0.5,1.2 
-        C0.35,1.2 0.2,1.05 0.2,0.9 
-        C0.2,0.75 0.35,0.6 0.5,0.6 
-        Z
-      " />
-    </clipPath>
-    <clipPath id="heartClip" clipPathUnits="objectBoundingBox">
-      <path d="M0.5,0.15 C0.6,0.05 0.7,0 0.8,0.05 C0.9,0.1 1,0.2 0.95,0.35 C0.9,0.5 0.75,0.65 0.5,0.85 C0.25,0.65 0.1,0.5 0.05,0.35 C0,0.2 0.1,0.1 0.2,0.05 C0.3,0 0.4,0.05 0.5,0.15 Z"/>
-    </clipPath>
-  </defs>
-</svg>
-}
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -51,11 +27,12 @@
             position: relative;
             z-index: 2;
             width: 100%;
+            padding: 20px;
         }
 
         header {
             text-align: center;
-            padding: 30px 0;
+            padding: 20px 0;
             position: relative;
             width: 100%;
             margin-bottom: 20px;
@@ -71,12 +48,12 @@
         .title {
             font-family: 'Georgia', serif;
             font-style: italic;
-            font-size: 3.8rem;
+            font-size: 3rem;
             font-weight: 400;
             color: #ad0c0c;
             margin-bottom: 15px;
-            letter-spacing: 3px;
-            text-shadow: 0 2px 4px rgba(206, 191, 191, 0.2);
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(187, 17, 17, 0.2);
             position: relative;
         }
 
@@ -92,10 +69,10 @@
         }
 
         .subtitle {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: #c2331a;
             font-style: italic;
-            margin: 20px 0 30px;
+            margin: 15px 0 20px;
             font-weight: 300;
         }
 
@@ -117,36 +94,31 @@
         .introduction {
             max-width: 800px;
             background: rgba(255, 245, 240, 0.9);
-            padding: 60px 60px;
-            margin: 40px 0 60px; 
+            padding: 40px;
+            margin: 20px 0 30px;
             text-align: center;
             position: relative;
             z-index: 3;
             border: 2px dashed #ff66b3;
             transition: transform 0.3s ease;
-
-            clip-path: url(#heartClip);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            border-radius: 20px;
         }
 
         .introduction:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 35px rgba(140, 94, 88, 0.2);
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(140, 94, 88, 0.2);
         }
 
         .introduction p {
-            font-size: 1.25rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
             color: #6d4c4c;
         }
 
         .signature {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2.2rem;
+            font-family: 'Georgia', cursive;
+            font-size: 1.8rem;
             color: #ff66b3;
             margin-top: 15px;
             display: block;
@@ -154,9 +126,10 @@
 
         .jar-container {
             position: relative;
-            width: 380px; 
+            width: 100%;
+            max-width: 380px;
             height: 450px;
-            margin: 40px auto;
+            margin: 20px auto;
             z-index: 3;
             perspective: 1000px;
         }
@@ -170,9 +143,9 @@
             border-radius: 45% 45% 25% 25%;
             border: 10px solid rgba(224, 209, 192, 0.85);
             box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.15), 
-                inset 0 0 40px rgba(255, 255, 255, 0.7),
-                inset 0 10px 30px rgba(255, 255, 255, 0.9);
+                0 20px 40px rgba(0, 0, 0, 0.15), 
+                inset 0 0 30px rgba(255, 255, 255, 0.7),
+                inset 0 8px 20px rgba(255, 255, 255, 0.9);
             overflow: hidden;
             backdrop-filter: blur(3px);
             transform-style: preserve-3d;
@@ -189,11 +162,12 @@
             left: 50%;
             transform: translateX(-50%);
             width: 400px; 
+            max-width: 105%;
             height: 25px;
             background: linear-gradient(to bottom, #ff99cc, #ff66b3);
             border-radius: 50px;
             z-index: 2;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
         }
 
         .jar-content {
@@ -215,8 +189,8 @@
             background: linear-gradient(to bottom, #fff8f0, #fff0e0);
             border-radius: 8px;
             box-shadow: 
-                0 5px 12px rgba(0, 0, 0, 0.12),
-                inset 0 0 10px rgba(255, 255, 255, 0.5);
+                0 4px 10px rgba(0, 0, 0, 0.12),
+                inset 0 0 8px rgba(255, 255, 255, 0.5);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -225,7 +199,7 @@
             z-index: 1;
             overflow: hidden;
             transform-origin: center;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-align: center;
             padding: 15px 10px;
             color: #8c5e58;
@@ -235,7 +209,7 @@
 
         .love-note:hover {
             transform: scale(1.15) rotate(5deg);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             z-index: 10;
             background: linear-gradient(to bottom, #fffdf9, #fff5eb);
         }
@@ -273,7 +247,7 @@
 
         .special-memories {
             max-width: 900px;
-            margin: 60px 0;
+            margin: 40px 0;
             text-align: center;
             position: relative;
             z-index: 3;
@@ -281,16 +255,16 @@
         }
 
         .special-memories h2 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: #530606cc;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             text-shadow: 0 2px 3px rgba(187, 17, 17, 0.952);
         }
 
         .memory-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 30px;
+            gap: 20px;
             justify-content: center;
         }
 
@@ -301,7 +275,6 @@
             perspective: 1000px;
             cursor: pointer;
             margin: 0 auto;
-
             transform: rotate(3deg);
             transform-origin: center;
             transition: transform 0.3s ease;
@@ -326,18 +299,18 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding: 40px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
 
-.memory-card .card-front {
-    background: linear-gradient(135deg, #ffd6eb, #ffb3d9);
-    color: #8c5e58;
-    font-weight: bold;
-    font-size: 1rem;
-    overflow: hidden;
-}
+        .memory-card .card-front {
+            background: linear-gradient(135deg, #ffd6eb, #ffb3d9);
+            color: #8c5e58;
+            font-weight: bold;
+            font-size: 1rem;
+            overflow: hidden;
+        }
 
         .memory-card .card-back {
             background: linear-gradient(135deg, #fff0f7, #ffe6f2);
@@ -345,7 +318,7 @@
             color: #8c5e58;
             font-size: 0.7rem;
             line-height: 1.5;
-            padding: 20px;
+            padding: 15px;
         }
 
         .memory-card.flipped .card-front {
@@ -357,27 +330,26 @@
         }
 
         .memory-card i {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
             color: #ff66b3;
         }
 
         .penguin-mystery-card {
-            width: 320px;
-            height: 350px;
+            width: 280px;
+            height: 300px;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            background: #f0e6ff;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #ffd6eb, #c2f0f0);
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             cursor: pointer;
             transition: all 0.5s ease;
-            background: linear-gradient(45deg, #ffd6eb, #c2f0f0);
             perspective: 1000px;
-            margin: 30px auto;
+            margin: 20px auto;
         }
 
         .penguin-mystery-card::before {
@@ -402,7 +374,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
         }
 
@@ -426,16 +398,16 @@
         }
 
         .card-front i {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: white;
-            margin-bottom: 20px;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
             animation: pulse 2s infinite;
         }
 
         .card-front h3 {
             color: white;
-            font-size: 2rem;
+            font-size: 1.8rem;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
@@ -447,16 +419,16 @@
 
         .reveal-text {
             position: absolute;
-            top: 20px;
+            top: 15px;
             left: 0;
             right: 0;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #ff66b3;
             font-weight: bold;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
             animation: float 4s ease-in-out infinite;
             z-index: 3;
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Georgia', cursive;
         }
 
         .message-modal {
@@ -482,13 +454,13 @@
 
         .modal-content {
             background: #fffdf9;
-            max-width: 550px;
+            max-width: 500px;
             width: 90%;
-            padding: 50px;
-            border-radius: 25px;
+            padding: 30px;
+            border-radius: 20px;
             text-align: center;
             position: relative;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
             border: 2px solid #ff99cc;
             transform: scale(0.9);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -500,10 +472,10 @@
         }
 
         .modal-content p {
-            font-size: 1.8rem;
-            line-height: 1.8;
+            font-size: 1.6rem;
+            line-height: 1.6;
             color: #ff66b3;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-style: italic;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
             position: relative;
@@ -512,10 +484,10 @@
 
         .close-modal {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 45px;
-            height: 45px;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: #ff99cc;
             color: white;
@@ -523,9 +495,9 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
 
         .close-modal:hover {
@@ -535,7 +507,7 @@
 
         footer {
             text-align: center;
-            padding: 40px 0 20px;
+            padding: 30px 0 15px;
             color: #ffe6f2;
             margin-top: auto;
             width: 100%;
@@ -545,13 +517,13 @@
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin: 25px 0;
+            gap: 15px;
+            margin: 20px 0;
         }
 
         .social-icons a {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             background: linear-gradient(135deg, #ffd6eb, #ffb3d9);
             display: flex;
@@ -560,14 +532,14 @@
             color: #8c5e58;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         }
 
         .social-icons a:hover {
             background: linear-gradient(135deg, #ff99cc, #ff66b3);
             color: #fff;
-            transform: translateY(-7px) rotate(5deg);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .floating-hearts {
@@ -585,7 +557,7 @@
             position: absolute;
             bottom: -50px;
             color: rgba(255, 102, 179, 0.8);
-            font-size: 24px;
+            font-size: 20px;
             animation: floatUp linear forwards;
             pointer-events: auto;
             cursor: pointer;
@@ -595,7 +567,7 @@
 
         .heart:hover {
             color: #ff3399;
-            transform: scale(1.8);
+            transform: scale(1.6);
             text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
@@ -608,16 +580,16 @@
 
         .music-player {
             position: fixed;
-            bottom: 150px;
-            right: 25px;
+            bottom: 120px;
+            right: 20px;
             z-index: 10;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 50px;
-            padding: 12px 20px;
+            padding: 10px 15px;
             display: flex;
             align-items: center;
-            gap: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            gap: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
             backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 179, 217, 0.3);
             transition: transform 0.3s ease;
@@ -628,8 +600,8 @@
         }
 
         .play-btn {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: linear-gradient(135deg, #ff99cc, #ff66b3);
             display: flex;
@@ -638,18 +610,18 @@
             color: white;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
         }
 
         .play-btn:hover {
-            transform: scale(1.15);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+            transform: scale(1.1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
         }
 
         .song-title {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #8c5e58;
-            max-width: 160px;
+            max-width: 140px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -658,49 +630,50 @@
         
         .fixed-heart {
             position: fixed;
-            top: 30px;
-            left: 30px;
-            width: 60px;
-            height: 60px;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
             background: #ff3366;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             cursor: pointer;
             z-index: 1000;
-            box-shadow: 0 0 20px rgba(255, 51, 102, 0.8), 0 0 40px rgba(255, 51, 102, 0.6);
+            box-shadow: 0 0 15px rgba(255, 51, 102, 0.8), 0 0 30px rgba(255, 51, 102, 0.6);
             transition: all 0.3s ease;
             animation: pulse 1.5s infinite;
         }
         
         .fixed-heart:hover {
-            transform: scale(1.2);
+            transform: scale(1.15);
             background: #ff0055;
-            box-shadow: 0 0 30px rgba(255, 0, 85, 1), 0 0 60px rgba(255, 0, 85, 0.8);
+            box-shadow: 0 0 25px rgba(255, 0, 85, 1), 0 0 50px rgba(255, 0, 85, 0.8);
         }
         
         .fixed-heart:hover::after {
             content: "My heart always beats with your love";
             position: absolute;
-            left: 70px;
-            width: 220px;
+            left: 60px;
+            width: 200px;
             background: rgba(255, 255, 255, 0.95);
             color: #ff66b3;
-            padding: 10px 15px;
-            border-radius: 15px;
-            font-size: 1rem;
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-size: 0.9rem;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
             z-index: 1001;
             animation: fadeIn 0.5s ease-out;
         }
 
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .title {
-                font-size: 2.8rem;
+                font-size: 2.4rem;
             }
             
             .subtitle {
@@ -708,8 +681,11 @@
             }
             
             .jar-container {
-                width: 320px;
                 height: 400px;
+            }
+            
+            .jar-glass {
+                height: 350px;
             }
             
             .love-note {
@@ -719,65 +695,12 @@
             }
             
             .modal-content p {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
             }
             
             .introduction {
-                padding: 80px 30px;
-                max-width: 90%;
-                margin: 30px 0 40px; 
-            }
-            
-            .memory-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            
-            .memory-card {
-                width: 140px;
-                height: 140px;
-                transform: rotate(2deg); 
-            }
-            
-            .memory-card:nth-child(even) {
-                transform: rotate(-2deg); 
-            }
-            
-            .fixed-heart {
-                width: 50px;
-                height: 50px;
-                font-size: 1.8rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .title {
-                font-size: 2.3rem;
-            }
-            
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .introduction p {
-                font-size: 1.1rem;
-                line-height: 1.6;
-            }
-            
-            .introduction {
-                padding: 60px 20px;
-                margin: 20px 20px 20px;
-            }
-            
-            .jar-container {
-                width: 280px;
-                height: 360px;
-            }
-            
-            .love-note {
-                width: 70px;
-                height: 90px;
-                font-size: 0.7rem;
+                padding: 30px;
+                margin: 15px 0 25px;
             }
             
             .memory-grid {
@@ -786,45 +709,109 @@
             }
             
             .memory-card {
-                width: 130px;
-                height: 130px;
-                transform: rotate(1.5deg); 
+                width: 140px;
+                height: 140px;
+                transform: rotate(2deg);
             }
             
             .memory-card:nth-child(even) {
-                transform: rotate(-1.5deg); 
+                transform: rotate(-2deg);
             }
-            
-            .special-memories h2 {
+        }
+
+        @media (max-width: 480px) {
+            .title {
                 font-size: 2rem;
             }
             
-            .penguin-mystery-card {
-                width: 280px;
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .introduction p {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            
+            .introduction {
+                padding: 25px;
+                margin: 10px 0 20px;
+            }
+            
+            .jar-container {
+                height: 350px;
+                max-width: 320px;
+            }
+            
+            .jar-glass {
                 height: 300px;
+            }
+            
+            .love-note {
+                width: 70px;
+                height: 85px;
+                font-size: 0.7rem;
+                padding: 10px;
+            }
+            
+            .memory-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
+            .memory-card {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .special-memories h2 {
+                font-size: 1.8rem;
+            }
+            
+            .penguin-mystery-card {
+                width: 250px;
+                height: 270px;
+            }
+            
+            .modal-content p {
+                font-size: 1.1rem;
             }
         }
 
         @media (max-width: 420px) {
-                        
-            .jar-glass {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    height: 350px;
-    border: 2px solid #aaa;
-
+            .title {
+                font-size: 1.8rem;
             }
-.memory-card .card-back
-  {
-    font-size: 0.6rem;
-
-}
             
-
-
+            .introduction {
+                padding: 20px 15px;
+            }
+            
+            .jar-container {
+                height: 320px;
+                max-width: 280px;
+            }
+            
+            .jar-glass {
+                height: 270px;
+            }
+            
+            .love-note {
+                width: 60px;
+                height: 75px;
+                font-size: 0.65rem;
+            }
+            
+            .memory-grid {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .memory-card {
+                width: 150px;
+                height: 150px;
+            }
         }
 
         @keyframes fadeIn {
@@ -834,13 +821,13 @@
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.15); }
+            50% { transform: scale(1.1); }
             100% { transform: scale(1); }
         }
 
         @keyframes float {
             0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(5deg); }
+            50% { transform: translateY(-8px) rotate(5deg); }
             100% { transform: translateY(0) rotate(0deg); }
         }
 
@@ -850,8 +837,6 @@
 
         .delay-1 { animation-delay: 0.2s; }
         .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        .delay-4 { animation-delay: 0.8s; }
 
         .pulse {
             animation: pulse 2s infinite;
